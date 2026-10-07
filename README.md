@@ -106,3 +106,13 @@ Initial set up of MongoDB database:
 - access the mongo shell with `docker exec -it mongodb_dockerhub mongosh -u admin -p secret`
 - run command, `show dbs` within the mongo shell to see a list of databases
 - type `exit` to quit the shell after you confirm it is working
+
+## Port
+
+- Backend: http://localhost:5002
+- Frontend: http://localhost:7002
+- About API: http://localhost:5002/about
+
+- Set PORT=5002 in back-end/.env.
+- Set VITE_ABOUT_API_URL=http://localhost:5002/about in front-end/.env.
+- Restart both servers after changing environment variables.

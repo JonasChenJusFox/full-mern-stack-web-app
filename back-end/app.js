@@ -78,5 +78,20 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    title: 'About Us',
+    paragraphs: [
+      'My name is Jonas Chen. I am studying Computer Science and Mathematics at New York University, with a minor in Web Programming.',
+
+      'I am interested in software engineering and web development. I enjoy learning how front-end interfaces and back-end services work together to build useful applications.',
+
+      'Through this project, I am practicing full-stack development with React, Express, and MongoDB. My goal is to strengthen my programming skills and build applications that solve real problems.'
+    ],
+    imageUrl: '/jonas.png',
+    imageAlt: 'Photo of Jonas Chen'
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
